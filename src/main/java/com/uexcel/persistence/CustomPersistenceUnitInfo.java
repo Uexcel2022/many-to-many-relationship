@@ -18,7 +18,7 @@ public class CustomPersistenceUnitInfo implements PersistenceUnitInfo {
 
     @Override
     public String getPersistenceUnitName() {
-        return "my-persistence unit";
+        return "my-persistence-unit";
     }
 
     @Override
@@ -36,7 +36,7 @@ public class CustomPersistenceUnitInfo implements PersistenceUnitInfo {
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setJdbcUrl("jdbc:mariadb://localhost:3306/hibernate_demo");
         dataSource.setUsername("root");
-        dataSource.setPassword("jvmam19");
+        dataSource.setPassword("jvman19");
         dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
         return dataSource;
     }
