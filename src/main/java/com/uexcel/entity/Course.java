@@ -1,5 +1,7 @@
 package com.uexcel.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,8 +19,8 @@ public class Course {
     @Column(name = "course_name")
     private String courseName;
 
-    @ManyToMany(mappedBy = "student")
-    private Student student;
+    @ManyToMany(mappedBy = "course")
+    private List<Student> student;
 
     public Long getCourseId() {
         return courseId;
@@ -36,11 +38,11 @@ public class Course {
         this.courseName = courseName;
     }
 
-    public Student getStudent() {
+    public List<Student> getStudent() {
         return student;
     }
 
-    public void setStudent(Student student) {
+    public void setStudent(List<Student> student) {
         this.student = student;
     }
 
